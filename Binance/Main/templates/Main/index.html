@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Main/css/style.css' %}">
+    <title>Binance</title>
+    <script src="{% static 'Main/js/js.js' %}"></script>
+</head>
+<body>
+    <!-- TradingView Widget BEGIN -->
+    <div id="witget">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js">
+        {
+        "height": "500",
+        "symbol": "{{ pare }}",
+        "interval": "D",
+        "timezone": "Etc/UTC",
+        "theme": "light",
+        "style": "1",
+        "locale": "en",
+        "enable_publishing": false,
+        "allow_symbol_change": true,
+        "support_host": "https://www.tradingview.com"
+        }
+        </script>
+        </div>
+    </div>
+    
+  <div id="all_blocks">
+    {% for pare in data %}
+      <div class="block">
+        <form action="" method="get">
+          <button class="button" name="button" id="button" value="{{ pare.symbol }}">
+            {{ pare.symbol }}
+            {{ pare.price }}
+          </button>
+        </form>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>

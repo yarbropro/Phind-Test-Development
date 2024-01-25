@@ -1,0 +1,41 @@
+#all_blocks {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(144deg, rgba(2,0,36,1) 0%, rgba(94,9,121,1) 38%, rgba(0,212,255,1) 100%);
+    display: flex;
+}
+
+#witget {
+    width: 55%;
+    display: flex;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    border-radius: 5px;
+    margin: 10px;
+
+    width: 100px;
+}
+
+#button {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    width: 100px;
+}
